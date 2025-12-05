@@ -1165,6 +1165,24 @@ h4 {
     margin: 0 auto;
     filter: drop-shadow(0 4px 15px rgba(114, 239, 54, 0.4));
     animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover .benefit-card__icon::before {
+    animation: bounce-fruit 0.6s ease infinite;
+    transform: scale(1.15);
+}
+
+@keyframes bounce-fruit {
+
+    0%,
+    100% {
+        transform: scale(1.15) translateY(0);
+    }
+
+    50% {
+        transform: scale(1.15) translateY(-10px);
+    }
 }
 
 .benefit-card h3 {
@@ -1310,6 +1328,20 @@ h4 {
     box-shadow: 0 2px 8px rgba(255, 60, 74, 0.4);
 }
 
+.benefits--grapefruit .benefit-card:hover h3 {
+    background: none;
+    -webkit-text-fill-color: var(--white);
+    color: var(--white);
+}
+
+.benefits--grapefruit .benefit-card:hover p {
+    color: var(--white);
+}
+
+.benefits--grapefruit .benefit-card:hover h3::after {
+    background: rgba(255, 255, 255, 0.5);
+}
+
 /* === AVOCADO BENEFITS SECTION === */
 .benefits--avocado {
     background: linear-gradient(180deg, #f0f9f4 0%, #e0f2e9 100%);
@@ -1353,6 +1385,20 @@ h4 {
 .benefits--avocado .benefit-card h3::after {
     background: linear-gradient(135deg, #2d5016 0%, #3d6b23 100%);
     box-shadow: 0 2px 8px rgba(45, 80, 22, 0.4);
+}
+
+.benefits--avocado .benefit-card:hover h3 {
+    background: none;
+    -webkit-text-fill-color: var(--white);
+    color: var(--white);
+}
+
+.benefits--avocado .benefit-card:hover p {
+    color: var(--white);
+}
+
+.benefits--avocado .benefit-card:hover h3::after {
+    background: rgba(255, 255, 255, 0.5);
 }
 
 /* === MANGO BENEFITS SECTION === */
