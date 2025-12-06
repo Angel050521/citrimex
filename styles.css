@@ -312,7 +312,7 @@ h4 {
     position: relative;
     padding-top: 90px;
     overflow: hidden;
-    background-image: url('https://images.unsplash.com/photo-1583777731160-5abdc2fd7ab3?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: url('images/unsplash/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1068,7 +1068,7 @@ h4 {
 
 /* Benefits con imagen de fondo */
 .benefits--with-bg {
-    background-image: url('https://images.unsplash.com/photo-1590502593747-42a996133562?q=80&w=1470&auto=format&fit=crop');
+    background-image: url('images/unsplash/benefits-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -2110,7 +2110,7 @@ h4 {
 .market {
     padding: 120px 0;
     background-color: var(--primary-color);
-    background-image: url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1374&auto=format&fit=crop');
+    background-image: url('images/unsplash/market-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -2373,7 +2373,7 @@ h4 {
 .contact {
     padding: 120px 0;
     background-color: var(--white);
-    background-image: url('https://images.unsplash.com/photo-1587049352851-8d4e89133924?q=80&w=1470&auto=format&fit=crop');
+    background-image: url('images/unsplash/contact-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -2913,6 +2913,15 @@ h4 {
     .whatsapp-float svg {
         width: 32px;
         height: 32px;
+    }
+
+    /* Optimizaciones de rendimiento móvil */
+    .hero,
+    .benefits--with-bg,
+    .market,
+    .contact {
+        background-attachment: scroll;
+        /* Desactiva parallax en móvil para mejor rendimiento */
     }
 }
 
