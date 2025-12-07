@@ -708,6 +708,81 @@ h4 {
     }
 }
 
+/* ===== ORGCHART ===== */
+.orgchart {
+    padding: 120px 0;
+    background: linear-gradient(180deg, #f8fdf9 0%, var(--white) 100%);
+    position: relative;
+}
+
+.orgchart__container {
+    text-align: center;
+}
+
+.orgchart__intro {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.orgchart__image-wrapper {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    display: inline-block;
+    transition: var(--transition);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.orgchart__image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: var(--gradient-secondary);
+    border-radius: var(--border-radius-lg);
+    z-index: -1;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.orgchart__image-wrapper:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl), 0 0 40px rgba(114, 239, 54, 0.3);
+}
+
+.orgchart__image-wrapper:hover::before {
+    opacity: 1;
+}
+
+.orgchart__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.orgchart__image-wrapper:hover .orgchart__image {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .orgchart__image-wrapper {
+        padding: 1rem;
+    }
+
+    .orgchart__intro {
+        font-size: 1.1rem;
+    }
+}
+
 /* ===== PRODUCTS ===== */
 .products {
     padding: 120px 0;
@@ -1519,8 +1594,49 @@ h4 {
     box-shadow: var(--shadow-xl), 0 0 40px rgba(45, 80, 22, 0.3);
 }
 
+/* Estilos para el texto en tarjetas featured de aguacate */
+.recipes--avocado .recipe-card--featured .recipe-card__content h3 {
+    color: var(--white);
+    -webkit-text-fill-color: var(--white);
+    background: none;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.recipes--avocado .recipe-card--featured .recipe-card__content p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.recipes--avocado .recipe-card--featured .recipe-card__meta {
+    border-top-color: rgba(255, 255, 255, 0.3);
+}
+
+.recipes--avocado .recipe-card--featured .recipe-card__meta span {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .recipes--avocado .recipe-card:hover::after {
     background: linear-gradient(135deg, #2d5016 0%, #3d6b23 100%);
+}
+
+/* Hover state para todas las tarjetas de aguacate - texto blanco */
+.recipes--avocado .recipe-card:hover .recipe-card__content h3 {
+    color: var(--white);
+    -webkit-text-fill-color: var(--white);
+    background: none;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.recipes--avocado .recipe-card:hover .recipe-card__content p {
+    color: var(--white);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.recipes--avocado .recipe-card:hover .recipe-card__meta span {
+    color: var(--white);
+}
+
+.recipes--avocado .recipe-card:hover .recipe-card__meta {
+    border-top-color: rgba(255, 255, 255, 0.3);
 }
 
 /* === MANGO RECIPES SECTION === */
@@ -2158,6 +2274,13 @@ h4 {
     text-align: left;
     left: 0;
     transform: none;
+    /* Sobrescribir estilos de gradiente del .section__title general */
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: var(--white);
+    background-clip: unset;
+    filter: none;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .market .section__title::after {

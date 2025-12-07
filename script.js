@@ -251,6 +251,7 @@ const translations = {
         nav: {
             inicio: "Inicio",
             quienes: "Quiénes Somos",
+            organigrama: "Organigrama",
             productos: "Productos",
             recetas: "Recetas",
             mercado: "Mercado",
@@ -278,6 +279,10 @@ const translations = {
             pasion: "Pasión",
             consumidor: "Enfoque al consumidor",
             eficiencia: "Eficiencia"
+        },
+        orgchart: {
+            title: "Organigrama",
+            intro: "Conoce nuestra estructura organizacional"
         },
         products: {
             title: "Productos",
@@ -762,6 +767,7 @@ const translations = {
         nav: {
             inicio: "Home",
             quienes: "About Us",
+            organigrama: "Organization",
             productos: "Products",
             recetas: "Recipes",
             mercado: "Market",
@@ -789,6 +795,10 @@ const translations = {
             pasion: "Passion",
             consumidor: "Customer Focus",
             eficiencia: "Efficiency"
+        },
+        orgchart: {
+            title: "Organization Chart",
+            intro: "Meet our organizational structure"
         },
         products: {
             title: "Products",
